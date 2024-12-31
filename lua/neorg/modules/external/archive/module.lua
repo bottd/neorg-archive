@@ -103,9 +103,15 @@ module.public.archive_current_file = function()
   local success = refactor.rename_file(current_path, new_path)
   if (not success) then
     log.error("Failed to archive " .. current_path)
-  else
-    log.info("Archived file under " .. new_path)
   end
+
+  if (vim.fn.filereadable(current_path)) then
+    log.info("[neorg-archive] File not moved to archive, moving to" .. new_path)
+    os.rename(current_path, new_path)
+  end
+
+  vim.api.nvim_command('edit ' .. new_path)
+  log.info("Archived file under " .. new_path)
 end
 
 module.public.archive_current_directory = function()

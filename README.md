@@ -63,10 +63,8 @@ require("neorg").setup({
 
 The archive module adds the following commands:
 
-### `:Neorg archive current-file` 
+### `:Neorg archive archive-file` 
 Moves the currently opened file to the archive: `archive-workspace/workspace-name/path-to-file`
 
-### TODO `:Neorg archive current-directory`
-Moves the current file's directory to the archive: `archive-workspace/workspace-name/path-to-directory`
-### TODO `:Neorg archive restore`
+### TODO `:Neorg archive restore-file`
 Moves an archived file back to it's workspace from `archive-workspace/workspace/file,norg` to `workspace/file.norg`

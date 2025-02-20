@@ -66,5 +66,5 @@ The archive module adds the following commands:
 ### `:Neorg archive archive-file` 
 Moves the currently opened file to the archive: `archive-workspace/workspace-name/path-to-file`
 
-### TODO `:Neorg archive restore-file`
-Moves an archived file back to it's workspace from `archive-workspace/workspace/file,norg` to `workspace/file.norg`
+### `:Neorg archive restore-file`
+Moves an archived file back to it's workspace from `archive-workspace/workspace/file.norg` to `workspace/file.norg`
